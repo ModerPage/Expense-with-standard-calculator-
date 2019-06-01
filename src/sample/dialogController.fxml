@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.DialogController">
+
+    <headerText>
+        Here you can put instruction.
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Expenses: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Label text="Food" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="foodField" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                onKeyReleased="#handleKeyReleased"/>
+
+            <Label text="Other" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="otherField" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                onKeyReleased="#handleKeyReleased"/>
+
+            <Label text="Profit: " GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <Label text="Income: " GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="incomeField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <Label text="Date:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="datePicker" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+            <Button fx:id="calc" text="Calculate Total" GridPane.rowIndex="6" GridPane.columnIndex="0" onAction="#getTotal" />
+            <Label text="Total:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+            <TextField fx:id="totalField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>
